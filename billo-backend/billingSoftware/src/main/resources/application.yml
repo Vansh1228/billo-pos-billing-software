@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/billo_billing_app
+    username: postgres
+    password: pass@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  servlet:
+    context-path: /api/v1.0/
+
+aws:
+  access:
+    key: ${AWS_ACCESS_KEY_ID}
+  secret:
+    key: ${AWS_SECRET_ACCESS_KEY}
+  region: us-east-1
+  bucket:
+    name: billing-software-vansh1228
