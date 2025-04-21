@@ -15,7 +15,6 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/categories")
 @RequiredArgsConstructor
 public class CategoryController {
     private final CategoryService categoryService;
@@ -25,7 +24,7 @@ public class CategoryController {
         return categoryService.getCategories();
     }
 
-    @PostMapping
+    @PostMapping("/admin/categories")
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryResponse addCategory(@RequestPart("category") String categoryString, @RequestPart("file") MultipartFile file) {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -39,7 +38,7 @@ public class CategoryController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("{id}")
+    @DeleteMapping("/admin/categories/{id}")
     public void deleteCategory(@PathVariable String id) {
         try {
             categoryService.delete(id);
