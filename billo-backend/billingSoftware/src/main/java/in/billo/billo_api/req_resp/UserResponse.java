@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserResponse {
-    private long userId;
+    private String userId;
     private String userName;
     private String userEmail;
     private String userPassword;

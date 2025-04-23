@@ -19,3 +19,6 @@ aws:
   region: us-east-1
   bucket:
     name: billing-software-vansh1228
+jwt:
+  secret:
+    key: diwenfreyfyfgeguotuyfuivgvhgdfvgdgv
